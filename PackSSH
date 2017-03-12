@@ -19,45 +19,46 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
 
-tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PackSSH" ; tput sgr0
+
 echo ""
-echo -e OBS:    Digite - PackSSH - para acessar esse PACK
-echo -e "|01|\033[01;34m•====> ConfVPS (CONFIGURA A VPS|SQUID3|) \033[01;34m"
-echo -e "|02|\033[01;31m•====> UserCreate (Criar Usuarios SSH)\033[0m"
-echo -e "|03|\033[01;31m•====> UserBackup (Gerencia Backup dos Usuarios SSH)\033[0m"
-echo -e "|04|\033[01;31m•====> CpuMonitor (Monitora o Uso da CPU, RAM e UPTIME)\033[0m"
-echo -e "|05|\033[01;31m•====> UserMonitor (Monitora os Usuarios Conectados)\033[0m"
-echo -e "|06|\033[01;31m•====> DadosMonitor (Monitora o Uso de Dados/Banda|in||out|)\033[0m"
-echo -e "|07|\033[01;31m•====> VNC (Ativa a Interface Gráfica no Servidor)\033[0m"
-echo -e "|08|\033[01;31m•====> ClearCache (Limpa Cache e Swap da Maquina)\033[0m"
-echo -e "|09|\033[01;31m•====> OpenUDP (Libera a Porta UDP para Ligacão e Jogos)\033[0m"
-echo -e "|10|\033[01;31m•====> SpeedTest (Testa a Velocidade de Link do Servidor)\033[0m"
-echo -e "|11|\033[01;31m•====> Banner (Mensagem para Usuario Quando Conectar)\033[0m"
-echo -e "|12|\033[01;31m•====> LimiterSSH (Limita as Conexoes de Cada Usuario)\033[0m"
-echo -e "|13|\033[01;31m•====> MudarLimite (Muda o Limite do Usuario)\033[0m"
-echo -e "|14|\033[01;31m•====> MudarSenha (Muda a Senha do Usuario)\033[0m"
-echo -e "|15|\033[01;31m•====> MudarValidade (Muda a Data de Validade do Usuario)\033[0m"
-echo -e "|16|\033[01;31m•====> UserDel (Deleta Usuario)\033[0m"
-echo -e "|17|\033[01;31m•====> addhost (Adiciona Novo Host ao Squid)\033[0m"
-echo -e "|18|\033[01;31m•====> OpenVPN (Configura e Gerencia Usuarios .ovpn)\033[0m"
-echo -e "|19|\033[01;31m•====> UserClear (Limpa Usuarios Vencidos)\033[0m"
-echo -e "|20|\033[01;31m•====> KernelControl (Procura ATT para Kernel ou Remove)\033[0m"
+echo -e "\033[1;32m  BEM VINDO AS CONFIGURAÇÕES DE SEU SERVIDOR:"
+echo -e 
+echo -e "\033[1;37m(01) Quer configurar sua VPS/SQUID3?"
+echo -e "\033[01;31m(02) Vamos Criar um usuarios SSH?"
+echo -e "\033[1;37m(03) Que tal fazer Backup dos Usuarios SSH?"
+echo -e "\033[01;31m(04) Monitore o Uso da CPU, RAM e UPTIME"
+echo -e "\033[1;37m(05) Quer quantos usuários estão Conectados?"
+echo -e "\033[01;31m(06) Aquí você Monitora o Uso de Dados/Banda > Enviados & Recebidos"
+echo -e "\033[01;31m(07) Vamos fazer uma faxina? Limpa Cache e Swap de seu Servidor"
+echo -e "\033[1;37m(08) Liberar a Porta UDP para Ligacão e Jogos no" "\033[1;33m==>>OpenVPN"
+echo -e "\033[01;31m(09) Testar a Velocidade de Link do Servidor" "\033[1;33m==>> OpenVPN ou VPS/SSH"
+echo -e "\033[1;37m(10) Mensagem de banner SSH para quando os Usuarios se Conectar"
+echo -e "\033[01;31m(11) Limita as Conexoes de Cada Usuario"
+echo -e "\033[1;37m(12) Muda o Limite do Usuario"
+echo -e "\033[01;31m(13) Altere a Senha dos Usuarios"
+echo -e "\033[1;37m(14) Mude a Data de Validade de seus Usuarios"
+echo -e "\033[01;31m(15) Exluir Usuarios"
+echo -e "\033[1;37m(16) Adicione um Novo Host ao Squid"
+echo -e "\033[01;31m(17) Configura e Gerencia Usuarios no" "\033[1;33m==>>OpenVPN"
+echo -e "\033[1;37m(18) Limpar Usuarios Vencidos"
+echo -e "\033[01;31m(19) Procure ATT para Kernel ou Remove\033[1;32m"
+echo -e "\033[1;37m(20) Ver usuário conectados"  "\033[1;33m==>>OpenVPN"y
 echo""
-read -p " Selecione a opção [01-20]: " opcao
+read -p " O QUE DESEJA FAZER? ESCOLHA UMA DAS OPÇÕES DE [01-20]: " opcao
 
 case $opcao in
  01)
   ConfVPS
   sleep 4
-  PackSSH;;
+  ajuda;;
  02)
   UserCreate
   sleep 5
-  PackSSH;;
+  ajuda;;
  03)
   UserBackup
   sleep 5
-  PackSSH;;
+  ajuda;;
  04)
   CpuMonitor;;
  05)
@@ -65,55 +66,55 @@ case $opcao in
  06)
   DadosMonitor;;
  07)
-  VNC
-  sleep 8
-  PackSSH;;
- 08)
   ClearCache
   sleep 4
-  PackSSH;;
- 09)
+  ajuda;;
+ 08)
   OpenUDP;;
- 10)
+ 09)
   SpeedTest
-  sleep 8
-  PackSSH;;
- 11)
+  sleep 15
+  ajuda;;
+ 10)
   Banner
   sleep 4
-  PackSSH;;
- 12)
+  ajuda;;
+ 11)
   LimiterSSH;;
- 13)
+ 12)
   MudarLimite
   sleep 4
-  PackSSH;;
- 14)
+  ajuda;;
+ 13)
   MudarSenha
   sleep 4
-  PackSSH;;
- 15)
+  ajuda;;
+ 14)
   MudarValidade
   sleep 5
-  PackSSH;;
- 16)
+  ajuda;;
+ 15)
   UserDel
   sleep 4
-  PackSSH;;
- 17)
+  ajuda;;
+ 16)
   addhost
   sleep 4
-  PackSSH;;
- 18)
+  ajuda;;
+ 17)
   OpenVPN
   sleep 5
-  PackSSH;;
- 19)
+  ajuda;;
+ 18)
   UserClear
   sleep 3
-  PackSSH;;
- 20)
+  ajuda;;
+ 19)
   KernelControl
   sleep 2
-  PackSSH;;
+  ajuda;;
+ 20)
+  check
+  sleep 15
+  ajuda;;
 esac
