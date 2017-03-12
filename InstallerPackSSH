@@ -102,7 +102,7 @@ chmod +x /bin/DadosMonitor
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/OpenVPN -O /bin/OpenVPN
 chmod +x /bin/OpenVPN
  
-wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/PackSSH -O /bin/ajuda
+wget https://github.com/alkdv/OpenPRO/blob/master/ajuda -O /bin/ajuda
 chmod +x /bin/ajuda
 
 clear
